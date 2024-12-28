@@ -11,7 +11,7 @@ vector DB, RAG pipeline implementation, and ROUGE evaluation is to be covered as
 project.
 
 # 2. Model Architectures and Experiments
-# 2.1. Model Architecture
+## 2.1. Model Architecture
 
 Retriever:
 • ChromaDB: Stores vector embeddings of text chunks for fast similarity-based retrieval.
@@ -20,17 +20,17 @@ Retriever:
 Language Model LLM:
 llama3.2: A local language model; for offline question answering using retrieved contexts.
 
-# 2.2. Steps in RAG Implementation
+## 2.2. Steps in RAG Implementation
 PDF Text Extraction: PyMuPDFLoader from LangChain splits document texts into manageable chunks by efficiently extracting text from a PDF document.
 Text Splitting: RecursiveCharacterTextSplitter splits the extracted content into chunks of 1000
 characters with an overlap of 200 characters for continuity in a chunk.
 Embedding and Storage: Each chunk is converted into vector embeddings via nomic-embed-text, and then it is stored for efficient retrieval in ChromaDB.
 Question-Answering Pipeline: The above retriever retrieves the relevant chunks for a given question using MultiQueryRetriever. A LangChain pipeline combines the retriever, a prompt template, and the LLM to generate answers.
 
-# 2.3. Loss/Objective Function
+## 2.3. Loss/Objective Function
 While no explicit loss function is implemented, the effectiveness of the system is assessed through ROUGE scores by comparing generated answers against ground-truth answers for precision, recall, and F1.
 
-# 2.4. Experiments Conducted
+## 2.4. Experiments Conducted
 ## Experiment 1: OpenAI with Local Embeddings
 Setup:
 • Selected OpenAI GPT-3.5 Turbo API in order to answer the questions.
@@ -48,7 +48,7 @@ Setup:
 • Reliance on third party services and API’s.
 • Low complementarity of local embeddings and OpenAI GPT-3.5 Turbo.
 
-# Experiment 2: Ollama with Local Embeddings
+## Experiment 2: Ollama with Local Embeddings
 ## Setup:
 • Used nomic-embed-text from the corpus of Ollama’s nomic embeddings.
 • Subtitle2.3 – Integrated the llama3.2 local model for question answering.
@@ -72,12 +72,13 @@ was required. They said that incorporating specific and precise mathematical des
 stages of computations made the final numbers more precise.
 
 # 3. Neural Network Overview
-3.1. LLM: llama3.2
+
+## 3.1. LLM: llama3.2
 • A lightweight, local language model optimized for contextual understanding and text
 generation.
 • Successfully integrated with LangChain for prompt-based response generation.
 
-# 3.2. Design Process
+## 3.2. Design Process
 
 The designing of the Retrieval-Augmented Generation (RAG) system was initiated in a hierarchical manner to ensure that individual units of the design were effectively integrated.
 Following is a brief elaboration of the design process which covers each part of the given figure.
