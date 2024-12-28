@@ -138,9 +138,9 @@ private applications.
 An assessment of the RAG system was done based on 10 Qs from the assignment. Although the system provided answers for all the questions, ROUGE scores were compared for only two of
 them with the reference answers given. 
 
-Result of Inference in Respect of Answer to Question 1 The results for the first question show moderate performance, as reflected in the ROUGE scores:
+## Result of Inference in Respect of Answer to Question 1 The results for the first question show moderate performance, as reflected in the ROUGE scores:
 
-# ROUGE-1:
+### ROUGE-1:
 Precision (54.2%): Says that approximately 51 percent of the words in the generated answer is
 correct when compared to the correct answer.
 Recall (44.8%): Notices that only about 30% of the total amount of the words in the reference answer
@@ -149,7 +149,7 @@ F1-Score (49.1%): This balance is again conveyed between precision and recall, a
 the generated answer contains a portion of what needs to be highlighted but there are other aspects
 missed.
 
-# ROUGE-2:
+### ROUGE-2:
 Precision (26.1%): Approximately 25% of the bigrams coincide with the reference answers and
 0.10% of the trigrams coincide.
 Recall (21.4%): More than three-quarters of the bigrams in the reference answer were omitted from
@@ -157,32 +157,33 @@ the generated answer.
 F1-Score (23.5%): Points to the fact that in the given case reference and generated solution
 phraseology differs grossly affecting the concept of fluency.
 
-# ROUGE-L:
+### ROUGE-L:
 Precision (41.7%): About 42% of the longest matching sequences of the generated and reference
 answers are accurate.
 Recall (34.5%): Demonstrates that about one-third of the LMSs in the reference answer was
 obtained.
 F1-Score (37.7%): The abbreviated encodes ‘part’ indicates that while the structure of the response is
 partially aligned it is not near the reference ideally.
-Key Observations
 
-# Strengths:
+### Key Observations
+
+### Strengths:
 While evaluating the generated answer, we see that it incorporates some aspects of the reference
 answer, as confirmed by the moderate ROUGE-1 and ROUGE-L metrics.
 Quantitative information (for example, the number of employees and the percentage of a decrease)
 was partially accurate, explaining the capacity of the system to work with numerical data.
 
-# Weaknesses:
+### Weaknesses:
 Low ROUGE-2 scores mean low fluency and phrasing similarity; the problem was observed when
 the generated answer is less similar to the reference and does not only contain different words.
 All the recall scores obtained indicate that some relevant information was missed from the
 reference answer.
 
-Information R for Question 2
+## Information R for Question 2
 The results for the second question show strong performance, as reflected in the high ROUGE
 scores:
 
-# ROUGE-1:
+### ROUGE-1:
 Precision (87.5%): Shows that close to 100 per cent of the words in the generated answer are the
 same as the words in the reference answer.
 Recall (87.5%): Notes that if excluding a few words, all the words in the given reference answer
@@ -191,14 +192,14 @@ F1-Score (87.5%): The scores about precision and recall in terms of sentences an
 emphasis on the fact that all components and aspects of the generated answer are in perfect match
 with the reference.
 
-# ROUGE-2:
+### ROUGE-2:
 Precision (80%): Indicates that a majority of the bigrams; a pair of consecutive words into the
 generated answer matches the reference answer.
 Recall (80%): Demonstrates that a vast majority in the bigrams in the reference set were captured.
 F1-Score (80%): On the correlation coefficient, we see smooth transition in the strings of generated
 responses, with minimal drift from the reference.
 
-# ROUGE-L:
+### ROUGE-L:
 Precision (87.5%): Points out that, long exact matches between the generated and reference
 answers are virtually entirely right.
 Recall (87.5%): Demonstrates that the structure of the generated answer can encompass all the
@@ -206,14 +207,14 @@ aspects of reference answer.
 F1-Score (87.5%): Esteems the overall compositional structure and relevance consistency of the
 generated response.
 
-# Key Observations
+### Key Observations
 
-# Strengths:
+### Strengths:
 It evaluated that the overall content of the generated answer indeed picked up the facts of the reference answer along with general and specific context.
 High ROUGE-2 scores indicate the test summaries’ fluent and almost identical match in phrasing with the reference summary. The recall scores reveal that almost no information is lost and the answer was accurate and
 exhaustive.
 
-# Weaknesses:
+### Weaknesses:
 Small issues with cohesion and fluency, such as changes in key words, may justify the decrease in ROUGE-2 scores compared to ROUGE-1, ROUGE-L.
 
 # Improvements Needed
